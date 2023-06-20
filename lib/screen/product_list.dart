@@ -77,18 +77,14 @@ class ProductList extends StatelessWidget {
                       return IconButton(
                         onPressed: () {
                           if (!state.cart_items.contains(getList()[index])) {
-                            context.read<CartBloc>().add(
-                                  AddToCart(
-                                    product: getList()[index],
-                                  ),
-                                );
+                            context
+                                .read<CartBloc>()
+                                .add(AddToCart(product: getList()[index]));
                           } else if (state.cart_items
                               .contains(getList()[index])) {
-                            context.read<CartBloc>().add(
-                                  RemovefromCart(
-                                    product: getList()[index],
-                                  ),
-                                );
+                            context
+                                .read<CartBloc>()
+                                .add(RemovefromCart(product: getList()[index]));
                           }
                         },
                         icon: Icon(
