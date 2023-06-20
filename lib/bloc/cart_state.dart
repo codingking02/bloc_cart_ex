@@ -22,6 +22,6 @@ class ProductAdd extends CartState {
 }
 
 class ProductRemove extends CartState {
-  final List<Product> Removeditem;
-  ProductRemove({required this.Removeditem}) : super(cart_items: Removeditem);
+  final List<Product> removeditem;
+  ProductRemove({required this.removeditem}) : super(cart_items: removeditem);
 }

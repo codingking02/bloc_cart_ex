@@ -12,20 +12,20 @@ class CartBloc extends Bloc<CartEvents, CartState> {
         ) {
     on<AddToCart>(
       (event, emit) {
-        items.add(event.product);
+        _items.add(event.product);
         emit(
           ProductAdd(
-            addeditem: items,
+            addeditem: _items,
           ),
         );
       },
     );
     on<RemovefromCart>(
       (event, emit) {
-        items.remove(event.product);
+        _items.remove(event.product);
         emit(
           ProductRemove(
-            Removeditem: items,
+            removeditem: _items,
           ),
         );
       },
